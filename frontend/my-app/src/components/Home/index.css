@@ -1,0 +1,28 @@
+.book-store-bg{
+    background-color: rgb(31, 31, 31);
+    min-height:100vh;
+}
+
+.books-card{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.current-page{
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: #fff;
+    padding: 8px;
+}

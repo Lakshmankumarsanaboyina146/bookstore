@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.bookstore-details-bg{
+    background-color: rgb(40, 39, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (min-width:769px){
+    .bookstore-details-bg{
+        flex-direction: row;
+    
+    }
+}
+.book-image-card{
+    width: 100vw;
+}
+
+@media screen and (min-width:769px) {
+    .book-image-card{
+        width: 40vw;
+    }
+}
+
+.book-image{
+    width: 100%;
+}
+
+.description-and-items-container{
+    width: 100%;
+}
+
+@media  screen and (min-width:769px) {
+    .description-and-items-container{
+        width: 60vw;
+        margin-top: 2rem;
+    }
+}
+
+.desc-card{
+    padding:1.3rem;
+    width: 100%;
+}
+
+.desc{
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: aliceblue;
+}
+
+
+@media  screen and (min-width:769px) {
+    .desc{
+        font-size: 1.5rem;
+    
+    }
+}
+.list-items{
+    font-size:1rem;
+    list-style-type: none;
+    color: #fff;
+    font-weight:400;
+    padding:0.5rem;
+    font-family: "Roboto";
+    margin-top: 12px;
+}
+
+.list-items li{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+@media screen and (min-width:769px) {
+    .list-items li{
+        font-size: 1.5rem;;
+    }
+}
+
+
+.cart{
+    background-color: rgb(56, 56, 242);
+    width: 100%;
+    margin: 10px;
+    color: #fff;
+}
+
+@media screen and (min-width:769px) {
+    .cart{
+        max-width: 200px;
+    }
+    .buy-now{
+        max-width: 200px;
+    }
+}
+
+.buy-now{
+    background-color: red;
+    font-size: 1rem;
+    font-family: "Roboto";
+    width: 100%;
+    margin: 10px;
+    color: #fff;
+}
