@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate, Link, Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 import "./index.css";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showpassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -15,12 +18,16 @@ function Login() {
   const token = Cookies.get("jwt_token");
   console.log(token);
   if (token !== undefined) {
-    return <Navigate to="/books" replace />;
+    return <Navigate to="/" replace />;
   }
 
   const onSubmitSuccess = (jwttoken) => {
     console.log(Cookies.set("jwt_token", jwttoken, { expires: 7 }));
-    navigate("/books", { replace: true });
+    navigate("/", { replace: true });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showpassword);
   };
 
   const submitForm = async (event) => {
@@ -47,26 +54,24 @@ function Login() {
       };
 
       const response = await fetch(url, options);
-      console.log(response);
       const data = await response.json();
-
+      console.log(data);
       if (response.ok) {
-        onSubmitSuccess(data.jwt_token);
+        onSubmitSuccess(data.jwtToken);
       } else {
         setError(data.error || "Invalid username or password");
       }
     } catch (error) {
-      // console.error("Login error:", error);
       setError("An error occurred. Please try again later.");
     }
   };
 
   return (
     <div className="login-bg-container">
-      <div class="wrapper">
+      <div className="wrapper">
         <form action="#" onSubmit={submitForm}>
           <h2>Login</h2>
-          <div class="input-field">
+          <div className="input-field">
             <input
               type="text"
               required
@@ -75,17 +80,23 @@ function Login() {
             />
             <label>Enter your username</label>
           </div>
-          <div class="input-field">
+          <div className="input-field">
             <input
-              type="password"
+              type={showpassword ? "text" : "password"}
               required
               value={password}
               onChange={onchangepassword}
             />
+            <span
+              onClick={togglePasswordVisibility}
+              className="icon"
+              aria-label={showpassword ? "Hide password" : "Show password"}>
+              {showpassword ? <FaEye /> : <FaEyeSlash />}
+            </span>
             <label>Enter your password</label>
           </div>
           <button type="submit">Log In</button>
-          <div class="register">
+          <div className="register">
             <Link to="/register">Don't have an account? Register</Link>
             <p>{error}</p>
           </div>

@@ -26,3 +26,43 @@
     color: #fff;
     padding: 8px;
 }
+
+.search-result-empty-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-search-image{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0.5rem;
+    margin: 0.4rem;
+}
+
+.search-result-not-found-heading{
+    font-family: "Roboto";
+    font-weight: 500;
+    color:#fff;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-top:18px;
+}
+
+@media screen and (min-width:769px) {
+    .search-result-not-found-heading{
+        font-size: 2rem;
+    }
+}
+
+.search-result-desc{
+    font-family: "Roboto";
+    color:#fff;
+    font-size: 1.2rem;
+    font-style: italic;
+    padding-top:18px;
+
+}
+

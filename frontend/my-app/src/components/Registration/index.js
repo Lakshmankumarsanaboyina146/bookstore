@@ -30,18 +30,7 @@ const Registration = () => {
 
   const submitForm = async (event) => {
     event.preventDefault();
-    /*if (
-      username === "" ||
-      firstname === "" ||
-      lastname === "" ||
-      email === "" ||
-      password === "" ||
-      confirmpassword === ""
-    ) {
-      setError("Please fill in all fields");
-      return;
-    }
-*/
+
     if (password !== confirmpassword) {
       setError("Password and confirm password should be same");
       return;

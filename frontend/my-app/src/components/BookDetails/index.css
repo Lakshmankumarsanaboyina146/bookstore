@@ -50,7 +50,8 @@
     font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
-    color: aliceblue;
+    line-height:2.5rem;
+    color: rgb(216, 209, 209);
 }
 
 
@@ -72,7 +73,11 @@
 
 .list-items li{
     font-size: 1.2rem;
-    color: #fff;
+    color: #eccfcf;
+}
+
+.list-items li span {
+    color:rgb(238, 137, 137)
 }
 
 @media screen and (min-width:769px) {

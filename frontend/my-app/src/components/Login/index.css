@@ -66,29 +66,24 @@ h2 {
   font-size: 16px;
   color: #fff;
 }
+.input-field .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fbf5f5;
+  font-size: 20px;
+}
+
+
 .input-field input:focus~label,
 .input-field input:valid~label {
   font-size: 0.8rem;
   top: 10px;
   transform: translateY(-120%);
 }
-.forget {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 25px 0 35px 0;
-  color: #fff;
-}
-#remember {
-  accent-color: #fff;
-}
-.forget label {
-  display: flex;
-  align-items: center;
-}
-.forget label p {
-  margin-left: 8px;
-}
+
 .wrapper a {
   color: #efefef;
   text-decoration: none;
@@ -96,6 +91,11 @@ h2 {
 .wrapper a:hover {
   text-decoration: underline;
 }
+.icon{
+  color:#fff;
+  align-self: flex-end;
+}
+
 button {
   background: #fff;
   color: #000;

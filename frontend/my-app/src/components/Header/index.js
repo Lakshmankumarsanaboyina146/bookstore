@@ -13,7 +13,11 @@ const Header = (props) => {
     navigate("/login", replace);
   };
 
-  const onChangeSearchInput = (event) => setSearch(event.target.value);
+  const onChangeSearchInput = (event) => {
+    const search = event.target.value;
+    const searchnospaces = search.replace(/\s/g, "");
+    setSearch(searchnospaces);
+  };
 
   const onClickSearchButton = () => setSearchInput(search);
 

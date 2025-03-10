@@ -41,14 +41,37 @@ const BookDetails = () => {
           <div className="desc-card">
             <p className="desc">{desc}</p>
             <ul className="list-items">
-              <li>Title : {title}</li>
-              <li>SubTitle : {subtitle}</li>
-              <li>Author : {author}</li>
-              <li>Language : {language}</li>
-              <li>Price : {price}</li>
-              <li>No of pages : {pages}</li>
-              <li>publisher : {publisher}</li>
-              <li>Year : {year}</li>
+              <li>
+                <span>Title : </span>
+                {title}
+              </li>
+              <li>
+                <span>SubTitle : </span>
+                {subtitle}
+              </li>
+              <li>
+                <span>Author : </span>
+                {author}
+              </li>
+              <li>
+                <span>Language :</span> {language}
+              </li>
+              <li>
+                <span>Price : </span>
+                {price}
+              </li>
+              <li>
+                <span>No of pages : </span>
+                {pages}
+              </li>
+              <li>
+                <span>publisher : </span>
+                {publisher}
+              </li>
+              <li>
+                <span>Year : </span>
+                {year}
+              </li>
             </ul>
             <div>
               <button type="button" className="cart">

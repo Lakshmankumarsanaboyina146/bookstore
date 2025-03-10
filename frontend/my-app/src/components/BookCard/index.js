@@ -1,20 +1,6 @@
 import { Link } from "react-router-dom";
 
 import "./index.css";
-/*
-const BookCard = (props) => {
-  const { bookData } = props;
-  const { isbn13,title, image } = bookData;
-  return (
-    <li className="card-container">
-      <Link to={`/bookDetails/${isbn13}`} className="link-item">
-        <img src={image} alt={title} className="image-card" />
-        <h1 className="title">{title}</h1>
-      </Link>
-    </li>
-  );
-};
-*/
 
 const BookCard = (props) => {
   const { bookData } = props;
