@@ -44,7 +44,7 @@ function Login() {
     const userDetails = { username, password };
 
     try {
-      const url = "http://localhost:3001/login";
+      const url = "https://bookstorebackend-hncq.onrender.com/login";
       const options = {
         method: "POST",
         headers: {
@@ -55,7 +55,7 @@ function Login() {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data);
+
       if (response.ok) {
         onSubmitSuccess(data.jwtToken);
       } else {

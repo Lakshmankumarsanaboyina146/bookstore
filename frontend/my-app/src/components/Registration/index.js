@@ -44,7 +44,7 @@ const Registration = () => {
         password,
       };
 
-      const url = "http://localhost:3001/register";
+      const url = "https://bookstorebackend-hncq.onrender.com/register";
       const options = {
         method: "POST",
         headers: {
